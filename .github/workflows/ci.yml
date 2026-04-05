@@ -40,3 +40,6 @@ jobs:
         dockerfile: Dockerfile
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
+
+    - name: Trigger Render Deploy
+      run: curl -X POST https://api.render.com/deploy/srv-d793bu4hg0os73e11g20?key=EZxFoRcvPxc
